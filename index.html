@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASTILLA | Quesos + Licores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CASTILLA</div> <ul class="nav-links">
+            <li><a href="#historia">Legado</a></li>
+            <li><a href="#mexico">Nuestro México</a></li>
+            <li><a href="#productos">Colección</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="subtitle">EST. 2024 — TEPATITLÁN, JALISCO</span>
+            <h1>TRADICIÓN Y VANGUARDIA</h1>
+            <p>La curaduría definitiva de licores premium y el hogar de Quesos Casillas.</p>
+        </div>
+    </header>
+
+    <section id="historia" class="section dark-bg">
+        <div class="container split">
+            <div class="text-block">
+                <h2>Nuestra Historia</h2>
+                <div class="line-separator"></div>
+                <p>En el corazón de los Altos de Jalisco, Castilla nace no solo como una licorería, sino como un santuario al buen vivir. Fusionamos la arquitectura de la hacienda mexicana con procesos de alta tecnología para ofrecer una experiencia de compra sin precedentes.</p>
+            </div>
+            <div class="image-block">
+                <div class="placeholder-img">FOTO DE LA BODEGA / HISTORIA</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mexico" class="section light-bg">
+        <div class="container center-text">
+            <h2>Nuestro México</h2>
+            <p class="large-text">"La tierra da lo que el alma pide."</p>
+            <p>Celebramos la riqueza de nuestro suelo. Desde los agaves de nuestras tierras hasta los lácteos producidos con estándares de ingeniería de precisión. Castilla es el punto de encuentro entre el pasado glorioso de México y su futuro innovador.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="section dark-bg">
+        <div class="container">
+            <h2>Selección Exclusiva</h2>
+            <div class="grid-products">
+                <div class="card">
+                    <div class="card-img"></div>
+                    <h3>Queso Casillas</h3>
+                    <p>Mozzarella & Chihuahua. Elaboración artesanal con tecnología de punta.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img"></div>
+                    <h3>Cava Mundial</h3>
+                    <p>Una selección rigurosa de los mejores destilados y vinos internacionales.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img"></div>
+                    <h3>Charcutería Fina</h3>
+                    <p>El acompañamiento perfecto para un paladar exigente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="brand">
+                <h3>CASTILLA</h3>
+                <p>QUESOS + LICORES</p>
+            </div>
+            <div class="contact">
+                <p>Tepatitlán de Morelos, Jalisco</p>
+                <p>contacto@castilla.mx</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Pequeño script para efecto de "Fade In" al hacer scroll (Alta tecnología/Suavidad)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        document.querySelectorAll('.section, .hero-content').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

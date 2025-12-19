@@ -1,0 +1,203 @@
+:root {
+    /* Paleta de Colores - AJUSTA EL CÓDIGO HEX DE TU LOGO AQUÍ */
+    --primary-color: #1a1a1a; /* Negro Loro Piana */
+    --accent-color: #C0A060;  /* Dorado/Cobre suave (ajustar a logo) */
+    --text-light: #F5F5F0;    /* Blanco Hueso */
+    --text-dark: #333333;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Tipografía y Utilidades */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navbar (Estilo Apple: Transparente con blur) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Aquí iría un background-image de alta calidad */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #2c2c2c; 
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--accent-color);
+}
+
+/* Sections */
+.section {
+    padding: 8rem 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.line-separator {
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 2rem 0;
+}
+
+/* Layouts */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-color);
+}
+
+.light-bg {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+}
+
+.center-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.large-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Grid Productos */
+.grid-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.card {
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto elevación sutil */
+    border-color: var(--accent-color);
+}
+
+.card-img {
+    height: 200px;
+    background-color: #222;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-content h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .split { grid-template-columns: 1fr; }
+    .nav-links { display: none; } /* En una versión completa haríamos un menú hamburguesa */
+}
